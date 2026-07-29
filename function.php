@@ -5,9 +5,10 @@
 function passwordGenerator($length)
 {
     $numbers = '0123456789';
-    $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $letters = 'abcdefghijklmnopqrstuvwxyz';
+    $capitalLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $symbols = '!@#$%^&*()_+-=';
-    $characters = $numbers . $letters . $symbols;
+    $characters = $numbers . $letters . $capitalLetter . $symbols;
     $password = '';
 
     if ($length < 1 || !is_numeric($length) || $length > 20) {
