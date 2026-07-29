@@ -2,7 +2,7 @@
 
 
 
-function passwordGenerator($length)
+function passwordGenerator(int $length)
 {
     $numbers = '0123456789';
     $letters = 'abcdefghijklmnopqrstuvwxyz';
