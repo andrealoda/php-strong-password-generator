@@ -10,8 +10,8 @@ function passwordGenerator($length)
     $characters = $numbers . $letters . $symbols;
     $password = '';
 
-    if ($length < 1) {
-        echo "<p class='error'>Inserisci un numero maggiore di 0</p>";
+    if ($length < 1 || !is_numeric($length) || $length > 20) {
+        echo "<p class='error'>Inserisci un numero maggiore di 0 e minore o uguale a 20</p>";
     } else {
 
         for ($i = 0; $i < $length; $i++) {
