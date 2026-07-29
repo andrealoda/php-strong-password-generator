@@ -1,0 +1,26 @@
+<?php
+
+
+
+function passwordGenerator($length)
+{
+    $numbers = '0123456789';
+    $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $symbols = '!@#$%^&*()_+-=';
+    $characters = $numbers . $letters . $symbols;
+    $password = '';
+
+    if ($length < 1) {
+        echo "<p class='error'>Inserisci un numero maggiore di 0</p>";
+    } else {
+
+        for ($i = 0; $i < $length; $i++) {
+            $password .= $characters[random_int(0, strlen($characters) - 1)];
+        }
+        return $password;
+    }
+}
+
+
+
+?>
