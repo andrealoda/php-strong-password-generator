@@ -50,10 +50,7 @@ if ($length > 0) {
                     <label for="include_symbols">Includi simboli</label>
                     <input type="checkbox" name="include_symbols" id="include_symbols">
                 </div>
-                <div class="checkbox-row">
-                    <label for="allow_repetition">Consenti ripetizioni di uno o più caratteri</label>
-                    <input type="checkbox" name="allow_repetition" id="allow_repetition">
-                </div>
+
             </div>
 
             <button type="submit" class="button">Genera</button>

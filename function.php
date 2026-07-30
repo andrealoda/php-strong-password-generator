@@ -27,9 +27,14 @@ function passwordGenerator(int $length): string
         $characters .= $symbols;
     }
 
+    $allowRepetition = isset($_GET['allow_repetition']) && $_GET['allow_repetition'] === 'on';
+
     $password = '';
     for ($i = 0; $i < $length; $i++) {
-        $password .= $characters[random_int(0, strlen($characters) - 1)];
+        $index = random_int(0, strlen($characters) - 1);
+        $password .= $characters[$index];
+
+ 
     }
     return $password;
 }
