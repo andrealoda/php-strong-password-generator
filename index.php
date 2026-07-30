@@ -35,11 +35,32 @@ if ($length > 0) {
         <form class="form" action="" method="GET">
             <label for="length" class="label">Quanti caratteri deve avere la password?</label>
             <input type="number" name="length" id="length" class="input" placeholder="" min="1" required>
+            <div class="check-options">
+
+                <div class="checkbox-row">
+                    <label for="include_letters">Includi lettere minuscole</label>
+                    <input type="checkbox" name="include_letters" id="include_letters">
+                </div>
+
+                <div class="checkbox-row">
+                    <label for="include_capital_letters">Includi lettere maiuscole</label>
+                    <input type="checkbox" name="include_capital_letters" id="include_capital_letters">
+                </div>
+                <div class="checkbox-row">
+                    <label for="include_symbols">Includi simboli</label>
+                    <input type="checkbox" name="include_symbols" id="include_symbols">
+                </div>
+                <div class="checkbox-row">
+                    <label for="allow_repetition">Consenti ripetizioni di uno o più caratteri</label>
+                    <input type="checkbox" name="allow_repetition" id="allow_repetition">
+                </div>
+            </div>
+
             <button type="submit" class="button">Genera</button>
         </form>
-
-
     </div>
+
+
 
 </body>
 
